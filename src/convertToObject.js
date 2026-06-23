@@ -17,9 +17,7 @@ function convertToObject(sourceString) {
       return acc;
     }
 
-    acc[parts[0].trim()] = parts[1].split(';')[0].trim();
-
-    return acc;
+    return { ...acc, [parts[0].trim()]: parts[1].trim() };
   }, {});
 }
 
